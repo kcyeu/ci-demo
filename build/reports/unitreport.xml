@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>
-  <testsuite name="../tests" tests="2" assertions="10" failures="0" errors="0" time="0.023965">
-    <testsuite name="MathTest" file="/Users/kmd/Desktop/git/ci-demo/tests/MathTest.php" tests="2" assertions="10" failures="0" errors="0" time="0.023965">
-      <testcase name="testAdd" class="MathTest" file="/Users/kmd/Desktop/git/ci-demo/tests/MathTest.php" line="7" assertions="9" time="0.020546"/>
-      <testcase name="testOmni" class="MathTest" file="/Users/kmd/Desktop/git/ci-demo/tests/MathTest.php" line="30" assertions="1" time="0.003419"/>
-    </testsuite>
-  </testsuite>
-</testsuites>
