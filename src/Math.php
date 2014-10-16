@@ -1,5 +1,5 @@
 <?php
-require_once('./inc/Math.inc');
+require_once(__DIR__ . '/inc/Math.inc');
 
 $math = new Math();
 $num1 = 42;

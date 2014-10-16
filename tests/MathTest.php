@@ -1,6 +1,6 @@
 <?php
 //require_once 'CsvFileIterator.php';
-require_once('../src/inc/Math.inc');
+require_once(__DIR__ . '/../src/inc/Math.inc');
 
 class MathTest extends PHPUnit_Framework_TestCase
 {
