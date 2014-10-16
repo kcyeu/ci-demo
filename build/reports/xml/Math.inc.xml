@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<phpunit xmlns="http://schema.phpunit.de/coverage/1.0">
+  <file name="Math.inc">
+    <totals>
+      <lines total="55" comments="18" code="37" executable="12" executed="10" percent="83.33%"/>
+      <methods count="3" tested="2" percent="66.67%"/>
+      <functions count="0" tested="0" percent=""/>
+      <classes count="1" tested="0" percent="0.00%"/>
+      <traits count="0" tested="0" percent=""/>
+    </totals>
+    <class name="Math" start="3" executable="12" executed="10" crap="8.30">
+      <package full="" name="" sub="" category=""/>
+      <namespace name=""/>
+      <method name="__construct" signature="__construct()" start="5" end="7" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="add" signature="add($num1, $num2)" start="18" end="28" crap="3" executable="4" executed="4" coverage="100"/>
+      <method name="divide" signature="divide($num1, $num2)" start="39" end="54" crap="4.37" executable="7" executed="5" coverage="71.428571428571"/>
+    </class>
+    <coverage>
+      <line nr="7">
+        <covered by="MathTest::testAdd"/>
+        <covered by="MathTest::testOmni"/>
+      </line>
+      <line nr="20">
+        <covered by="MathTest::testAdd"/>
+        <covered by="MathTest::testOmni"/>
+      </line>
+      <line nr="21">
+        <covered by="MathTest::testAdd"/>
+        <covered by="MathTest::testOmni"/>
+      </line>
+      <line nr="22">
+        <covered by="MathTest::testAdd"/>
+        <covered by="MathTest::testOmni"/>
+      </line>
+      <line nr="26">
+        <covered by="MathTest::testAdd"/>
+      </line>
+      <line nr="41">
+        <covered by="MathTest::testOmni"/>
+      </line>
+      <line nr="42">
+        <covered by="MathTest::testOmni"/>
+      </line>
+      <line nr="46">
+        <covered by="MathTest::testOmni"/>
+      </line>
+      <line nr="47">
+        <covered by="MathTest::testOmni"/>
+      </line>
+      <line nr="48">
+        <covered by="MathTest::testOmni"/>
+      </line>
+    </coverage>
+  </file>
+</phpunit>
