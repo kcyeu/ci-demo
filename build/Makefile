@@ -1,5 +1,5 @@
 unit:
-	phpunit --coverage-clover unit-test-coverage.xml ../tests
+	phpunit --coverage-xml coverage ../tests
 
 all: unit
 
