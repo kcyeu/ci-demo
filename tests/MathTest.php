@@ -4,46 +4,70 @@ require_once(__DIR__ . '/../src/inc/Math.inc');
 
 class MathTest extends PHPUnit_Framework_TestCase
 {
-    public function testAdd()
+    /**
+     * @dataProvider additionProvider
+     */
+    public function testAdd($expected, $num1, $num2)
     {
         $math = new Math();
 
-        // Integer
-        $this->assertEquals(44, $math->add(42, 2));
-        $this->assertEquals(0, $math->add(0, 0));
-        $this->assertEquals(-44, $math->add(-42, -2));
-        $this->assertEquals(-40, $math->add(-42, 2));
+        $this->assertEquals($expected, $math->add($num1, $num2));
+    }
 
-        // Float
-        $this->assertEquals(44.0, $math->add(42, 2.0));
-        $this->assertEquals(0.0, $math->add(0, 0.0));
-        $this->assertEquals(-44.0, $math->add(-42, -2.0));
-        $this->assertEquals(-40.0, $math->add(-42, 2.0));
+    public function additionProvider()
+    {
+        return array(
+            // Integer
+            array(44, 42, 2),
+            array(0, 0, 0),
+            array(-44, -42, -2),
+            array(-40, -42, 2),
+            // Float
+            array(44.0, 42, 2.0),
+            array(0.0, 0, 0.0),
+            array(-44.0, -42, -2.0),
+            array(-40.0, -42, 2.0),
+            // Exception
+            array(FALSE, 'foo', TRUE),
+        );
+    }
 
-        // Exception
-        $this->assertFalse($math->add('foo', TRUE));
+    /**
+     * @dataProvider divisionProvider
+     */
+    public function testDivide($expected, $num1, $num2)
+    {
+        $math = new Math();
+
+        $this->assertEquals($expected, $math->divide($num1, $num2));
+    }
+
+    public function divisionProvider()
+    {
+        return array(
+            // Integer
+            array(21, 42, 2),
+            array(FALSE, 0, 0),
+            array(21, -42, -2),
+            array(-21, -42, 2),
+            // Float
+            array(21.0, 42, 2.0),
+            array(FALSE, 0, 0.0),
+            array(21.0, -42, -2.0),
+            array(-21.0, -42, 2.0),
+            // Exception
+            array(FALSE, 'foo', TRUE),
+        );
     }
 
     /**
      * @depends testAdd
+     * @depends testDivide
      */
     public function testOmni()
     {
         $math = new Math();
-        $this->assertEquals(-20, $math->add(1.0, $math->divide(42, -2.0)));
-    }
 
-    /**
-     * @dataProvider additionProvider
-     */
-//    public function testAdd_v1($a, $b, $expected)
-//    {
-//        $math = new Math();
-//        $this->assertEquals($expected, $math($a + $b));
-//    }
-//
-//    public function additionProvider()
-//    {
-//        return new CsvFileIterator('AddData.csv');
-//    }
+        $this->assertEquals(42, $math->divide($math->add(42, 42), 2));
+    }
 }
