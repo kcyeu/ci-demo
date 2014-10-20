@@ -27,5 +27,5 @@ phpmd:
 		--reportfile reports/phpmd.xml
 	@echo
 
-all: unit phpmd
+all: unit phpmd phpcs
 
