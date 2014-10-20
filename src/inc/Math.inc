@@ -21,10 +21,7 @@ class Math
         {
             return ($num1 + $num2);
         }
-        else
-        {
-            return FALSE;
-        }
+        return FALSE;
     }
 
     /**
@@ -47,9 +44,6 @@ class Math
         {
             return ($num1 / $num2);
         }
-        else
-        {
-            return FALSE;
-        }
+        return FALSE;
     }
 }
