@@ -55,8 +55,10 @@ class MathTest extends PHPUnit_Framework_TestCase
             array(FALSE, 0, 0.0),
             array(21.0, -42, -2.0),
             array(-21.0, -42, 2.0),
+
             // Exception
-            array(FALSE, 'foo', TRUE),
+            // TODO: comment this out to demo insufficient coverage
+            //array(FALSE, 'foo', TRUE),
         );
     }
 
@@ -68,6 +70,8 @@ class MathTest extends PHPUnit_Framework_TestCase
     {
         $math = new CI_Demo\Math();
 
+        // TODO: Use this line to demo failed assertion
+        //$this->assertEquals(43, $math->divide($math->add(42, 42), 2));
         $this->assertEquals(42, $math->divide($math->add(42, 42), 2));
     }
 }

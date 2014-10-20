@@ -5,7 +5,7 @@ phpunit:
 	@echo "=================="
 	@echo "Running phpunit..."
 	@echo
-	phpunit ../tests
+	phpunit --coverage-text ../tests
 	@echo
 
 phpcs:
