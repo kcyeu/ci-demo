@@ -1,6 +1,15 @@
 <?php
 /**
- * @File Math.php
+ * Math
+ *
+ * PHP version 5
+ *
+ * @file Math.php
+ * @category Base
+ * @package  Math
+ * @author   Kuo-Cheng Yeu <kmd@mikuru.tw>
+ * @license  GPL 2.0
+ * @link     https://bitbucket.org/kcyeu/ci-demo
  */
 require_once __DIR__ . '/inc/Math.inc';
 
