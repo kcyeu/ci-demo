@@ -21,7 +21,10 @@ class Math
         {
             return ($num1 + $num2);
         }
-        return FALSE;
+        else
+        {
+            return FALSE;
+        }
     }
 
     /**
