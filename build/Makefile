@@ -1,23 +1,30 @@
+NO_COLOR=\x1b[0m
+GREEN_COLOR=\x1b[1;32;01m
+
+PHPUNIT=$(GREEN_COLOR)Running phpunit...$(NO_COLOR)
+PHPMD=$(GREEN_COLOR)Running phpmd...$(NO_COLOR)
+PHPCS=$(GREEN_COLOR)Running phpcs...$(NO_COLOR)
+
 prepare:
 	mkdir -p reports
 
 phpunit: 
 	@echo "=================="
-	@echo "Running phpunit..."
+	@echo "$(PHPUNIT)"
 	@echo
 	phpunit --coverage-text ../tests
 	@echo
 
 phpcs:
 	@echo "================"
-	@echo "Running phpcs..."
+	@echo "$(PHPCS)"
 	@echo
 	phpcs --standard=PSR2 ../src
 	@echo
 
 phpmd:
 	@echo "================"
-	@echo "Running phpmd..."
+	@echo "$(PHPMD)"
 	@echo
 	phpmd ../src text \
 		cleancode,codesize,controversial,design,naming,unusedcode
