@@ -1,4 +1,5 @@
 <?php
+namespace CI_Demo;
 
 class Math
 {
@@ -17,13 +18,10 @@ class Math
      */
     public function add($num1, $num2)
     {
-        if ( is_numeric($num1) && is_numeric($num2))
-        {
-            return ($num1 + $num2);
-        }
-        else
-        {
-            return FALSE;
+        if (is_numeric($num1) && is_numeric($num2)) {
+             return ($num1 + $num2);
+        } else {
+            return false;
         }
     }
 
@@ -38,12 +36,11 @@ class Math
      */
     public function divide($num1, $num2)
     {
-        if ($num2 == 0)
-        {
-            return FALSE;
+        if ($num2 == 0) {
+            return false;
         }
 
-        if ( is_numeric($num1) && is_numeric($num2))
+        if (is_numeric($num1) && is_numeric($num2))
         {
             return ($num1 / $num2);
         }

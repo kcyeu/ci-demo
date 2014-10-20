@@ -1,6 +1,6 @@
 <?php
 //require_once 'CsvFileIterator.php';
-require_once(__DIR__ . '/../src/inc/Math.inc');
+require_once __DIR__ . '/../src/inc/Math.inc';
 
 class MathTest extends PHPUnit_Framework_TestCase
 {
@@ -9,7 +9,7 @@ class MathTest extends PHPUnit_Framework_TestCase
      */
     public function testAdd($expected, $num1, $num2)
     {
-        $math = new Math();
+        $math = new CI_Demo\Math();
 
         $this->assertEquals($expected, $math->add($num1, $num2));
     }
@@ -37,7 +37,7 @@ class MathTest extends PHPUnit_Framework_TestCase
      */
     public function testDivide($expected, $num1, $num2)
     {
-        $math = new Math();
+        $math = new CI_Demo\Math();
 
         $this->assertEquals($expected, $math->divide($num1, $num2));
     }
@@ -66,7 +66,7 @@ class MathTest extends PHPUnit_Framework_TestCase
      */
     public function testOmni()
     {
-        $math = new Math();
+        $math = new CI_Demo\Math();
 
         $this->assertEquals(42, $math->divide($math->add(42, 42), 2));
     }

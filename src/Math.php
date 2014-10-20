@@ -11,6 +11,8 @@
  * @license  GPL 2.0
  * @link     https://bitbucket.org/kcyeu/ci-demo
  */
+namespace CI_Demo;
+
 require_once __DIR__ . '/inc/Math.inc';
 
 $math = new Math();
