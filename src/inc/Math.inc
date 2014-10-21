@@ -21,10 +21,7 @@ class Math
         if (is_numeric($num1) && is_numeric($num2)) {
              return ($num1 + $num2);
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 
     /**
@@ -43,16 +40,16 @@ class Math
         }
 
         // TODO: un-comment this to demo phpcs
-        /*
         if (is_numeric($num1) && is_numeric($num2))
         {
             return ($num1 / $num2);
         }
         return FALSE;
-        */
+/*
         if (is_numeric($num1) && is_numeric($num2)) {
             return ($num1 / $num2);
         }
         return false;
+*/
     }
 }
