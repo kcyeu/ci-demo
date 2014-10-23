@@ -21,6 +21,7 @@ before_install:
 install:
   - pear install pdepend/PHP_Depend
   - pear install phpmd/PHP_PMD
+  - phpenv rehash
 
 before_script:
   - if [[ "$DB" == "pgsql" ]]; then psql -c "DROP DATABASE IF EXISTS hello_world_test;" -U postgres; fi
@@ -29,7 +30,7 @@ before_script:
 
 script:
   - phpunit --coverage-text ./tests
-  - cd /build && make phpcs
+  - cd build && make all
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
