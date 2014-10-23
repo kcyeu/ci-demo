@@ -12,10 +12,10 @@ php:
 env: true
 
 before_install:
-  - pyrus channel-discover pear.pdepend.org
-  - pyrus channel-discover pear.phpmd.org
-#  - pear channel-discover pear.pdepend.org
-#  - pear channel-discover pear.phpmd.org
+#  - pyrus channel-discover pear.pdepend.org
+#  - pyrus channel-discover pear.phpmd.org
+  - pear channel-discover pear.pdepend.org
+  - pear channel-discover pear.phpmd.org
 
 install:
   - pyrus install pdepend/PHP_Depend
