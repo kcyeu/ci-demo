@@ -5,9 +5,6 @@ PHPUNIT=$(GREEN_COLOR)Running phpunit...$(NO_COLOR)
 PHPMD=$(GREEN_COLOR)Running phpmd...$(NO_COLOR)
 PHPCS=$(GREEN_COLOR)Running phpcs...$(NO_COLOR)
 
-prepare:
-	mkdir -p reports
-
 phpunit: 
 	@echo "=================="
 	@echo "$(PHPUNIT)"
@@ -30,7 +27,7 @@ phpmd:
 		cleancode,codesize,controversial,design,naming,unusedcode
 	@echo
 
-phpunit-ci: prepare
+phpunit-ci:
 	@echo "=================="
 	@echo "Running phpunit..."
 	@echo
@@ -41,7 +38,7 @@ phpunit-ci: prepare
 		./tests
 	@echo
 
-phpcs-ci: prepare
+phpcs-ci: 
 	@echo "================"
 	@echo "Running phpcs..."
 	@echo
@@ -51,7 +48,7 @@ phpcs-ci: prepare
 		./src
 	@echo
 
-phpmd-ci: prepare
+phpmd-ci: 
 	@echo "================"
 	@echo "Running phpmd..."
 	@echo
