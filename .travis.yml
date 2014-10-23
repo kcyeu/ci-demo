@@ -12,16 +12,14 @@ php:
 env: true
 
 before_install:
-#  - pyrus channel-discover pear.pdepend.org
-#  - pyrus channel-discover pear.phpmd.org
   - pear channel-discover pear.pdepend.org
   - pear channel-discover pear.phpmd.org
 
 install:
-  - pyrus install pdepend/PHP_Depend
-  - pyrus install phpmd/PHP_PMD
-#  - pear install pdepend/PHP_Depend
-#  - pear install phpmd/PHP_PMD
+#  - pyrus install pdepend/PHP_Depend
+#  - pyrus install phpmd/PHP_PMD
+  - pear install pdepend/PHP_Depend
+  - pear install phpmd/PHP_PMD
   - phpenv rehash
 
 before_script: true
