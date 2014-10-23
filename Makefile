@@ -12,21 +12,21 @@ phpunit:
 	@echo "=================="
 	@echo "$(PHPUNIT)"
 	@echo
-	phpunit --coverage-text ../tests
+	phpunit --coverage-text ./tests
 	@echo
 
 phpcs:
 	@echo "================"
 	@echo "$(PHPCS)"
 	@echo
-	phpcs --standard=PSR2 ../src
+	phpcs --standard=PSR2 ./src
 	@echo
 
 phpmd:
 	@echo "================"
 	@echo "$(PHPMD)"
 	@echo
-	phpmd ../src text \
+	phpmd ./src text \
 		cleancode,codesize,controversial,design,naming,unusedcode
 	@echo
 
@@ -34,11 +34,11 @@ phpunit-ci: prepare
 	@echo "=================="
 	@echo "Running phpunit..."
 	@echo
-	phpunit --log-junit reports/unitreport.xml \
-		--coverage-html reports/coverage \
-		--coverage-clover reports/coverage/coverage.xml \
-		--coverage-xml reports/xml \
-		../tests
+	phpunit --log-junit build/reports/unitreport.xml \
+		--coverage-html build/reports/coverage \
+		--coverage-clover build/reports/coverage/coverage.xml \
+		--coverage-xml build/reports/xml \
+		./tests
 	@echo
 
 phpcs-ci: prepare
@@ -46,23 +46,24 @@ phpcs-ci: prepare
 	@echo "Running phpcs..."
 	@echo
 	phpcs --report=checkstyle \
-		--report-file=reports/phpcs.xml \
+		--report-file=build/reports/phpcs.xml \
 		--standard=PSR2 \
-		../src
+		./src
 	@echo
 
 phpmd-ci: prepare
 	@echo "================"
 	@echo "Running phpmd..."
 	@echo
-	phpmd ../src xml \
+	phpmd ./src xml \
 		cleancode,codesize,controversial,design,naming,unusedcode \
-		--reportfile reports/phpmd.xml
+		--reportfile build/reports/phpmd.xml
 	@echo
 
 precommit: phpunit phpmd phpcs
 
 all: phpunit-ci phpmd-ci phpcs-ci
 
-doc: doxygen Doxyfile
+doc:
+	doxygen Doxyfile
 
