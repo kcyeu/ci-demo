@@ -57,10 +57,10 @@ phpmd-ci:
 		--reportfile build/reports/phpmd.xml
 	@echo
 
-precommit: phpunit phpmd phpcs
-
-all: phpunit-ci phpmd-ci phpcs-ci
-
 doc:
 	doxygen Doxyfile
+
+precommit: phpunit phpmd phpcs
+
+all: phpunit-ci phpmd-ci phpcs-ci doc
 
