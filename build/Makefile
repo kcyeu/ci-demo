@@ -64,3 +64,5 @@ precommit: phpunit phpmd phpcs
 
 all: phpunit-ci phpmd-ci phpcs-ci
 
+doc: doxygen Doxyfile
+
