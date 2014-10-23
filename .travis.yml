@@ -29,7 +29,7 @@ before_script:
 
 script:
   - phpunit --coverage-text ./tests
-  - cd build && make all
+  - cd /build && make phpcs
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
