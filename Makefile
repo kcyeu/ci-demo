@@ -62,5 +62,5 @@ doc:
 
 precommit: phpunit phpmd phpcs
 
-all: phpunit-ci phpmd-ci phpcs-ci
+all: phpunit-ci phpmd-ci phpcs-ci doc
 
