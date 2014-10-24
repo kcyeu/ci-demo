@@ -1,5 +1,5 @@
 # CI-Demo
-[![Build Status](https://travis-ci.org/kcyeu/ci-demo.svg)](https://travis-ci.org/kcyeu/ci-demo)
+[![Build Status](http://ci.mikuru.tw/buildStatus/icon?job=CI Demo)](http://ci.mikuru.tw/job/CI%20Demo/)
 
 Continuous integration in PHP
 
