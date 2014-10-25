@@ -37,6 +37,23 @@ class Math
     }
 
     /**
+     * Sub  
+     *
+     * @param numberic $num1 1st number
+     * @param numberic $num2 2nd number
+     *
+     * @return numberic sum of $num1 and $num2, FALSE for exception
+     *
+     */
+    public function sub($num1, $num2)
+    {
+        if (is_numeric($num1) && is_numeric($num2)) {
+             return ($num1 - $num2);
+        }
+        return false;
+    }
+
+    /**
      * Divide
      *
      * @param numberic $num1 1st number
@@ -51,14 +68,6 @@ class Math
             return false;
         }
 
-        // TODO: un-comment this to demo phpcs
-/*
-        if (is_numeric($num1) && is_numeric($num2))
-        {
-            return ($num1 / $num2);
-        }
-        return FALSE;
-*/
         if (is_numeric($num1) && is_numeric($num2)) {
             return ($num1 / $num2);
         }
