@@ -9,7 +9,7 @@ phpunit:
 	@echo "=================="
 	@echo "$(PHPUNIT)"
 	@echo
-	phpunit --coverage-text ./tests
+	phpunit --coverage-text ./tests/unit-tests
 	@echo
 
 phpcs:
@@ -35,7 +35,7 @@ phpunit-ci:
 		--coverage-html build/reports/coverage \
 		--coverage-clover build/reports/coverage/coverage.xml \
 		--coverage-xml build/reports/xml \
-		./tests
+		./tests/unit-tests
 	@echo
 
 phpcs-ci: 
