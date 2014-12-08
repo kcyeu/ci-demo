@@ -3,6 +3,12 @@
 
 Continuous integration in PHP
 
+## Demo
+ * php-unit
+ * phpmd
+ * phpcs
+ * doxygen
+
 ## Supported Platform
 ### [Jenkins](http://jenkins-ci.org/)
  * build/Makefile
