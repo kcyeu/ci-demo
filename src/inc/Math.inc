@@ -37,7 +37,7 @@ class Math
     }
 
     /**
-     * Sub  
+     * Sub
      *
      * @param numberic $num1 1st number
      * @param numberic $num2 2nd number
