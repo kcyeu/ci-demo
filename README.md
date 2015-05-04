@@ -1,8 +1,8 @@
 # CI-Demo
 Continuous Integration Demo in PHP
 
- * Commit build [![Build Status](http://ci.mikuru.tw/buildStatus/icon?job=CI Demo)](http://ci.mikuru.tw/job/CI%20Demo/)
- * Component build [![Build Status](http://ci.mikuru.tw/buildStatus/icon?job=CI Demo)](http://ci.mikuru.tw/job/CI%20Demo/)
+ * Commit build [![Build Status](https://ci.mikuru.tw/buildStatus/icon?job=CI Demo)](https://ci.mikuru.tw/job/CI%20Demo/)
+ * Component build [![Build Status](https://ci.mikuru.tw/buildStatus/icon?job=CI Demo)](https://ci.mikuru.tw/job/CI%20Demo/)
  * Integration build: TBD
  * Functional build: TBD
 
