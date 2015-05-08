@@ -13,7 +13,7 @@
  */
 namespace CI_Demo;
 
-require_once __DIR__ . '/inc/Math.inc';
+require_once __DIR__ . '/inc/Math.inc.php';
 
 $math = new Math();
 $num1 = 42;

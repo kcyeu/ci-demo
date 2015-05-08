@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../../src/inc/Math.inc';
+require_once __DIR__ . '/../../src/inc/Math.inc.php';
 
 class MathTest extends PHPUnit_Framework_TestCase
 {
