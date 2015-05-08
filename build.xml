@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="name-of-project" default="build">
   <property name="toolsdir" value="/usr/local/bin/" />
+
+  <target name="precommit" depends="prepare,lint,phpunit,phpmd,phpcs" description="" />
+
   <target name="build" depends="prepare,lint,tools-parallel" description="" />
 
   <target name="tools-parallel" depends="prepare" description="Run tools in parallel">
