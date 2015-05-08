@@ -53,7 +53,7 @@
       <arg value="xml" />
       <arg value="cleancode,codesize,controversial,design,naming,unusedcode" />
       <arg value="--reportfile" />
-      <arg path="${basedir}/build/reports/pmd.xml" />
+      <arg path="${basedir}/build/reports/phpmd.xml" />
     </exec>
     <property name="phpmd.done" value="true" />
   </target>
@@ -61,8 +61,6 @@
   <target name="phpcs" unless="phpcs.done" description="Find coding standard violations using PHP_CodeSniffer and print human readable output. Intended for usage on the command line before committing.">
     <exec executable="${toolsdir}phpcs" taskname="phpcs">
       <arg value="--standard=PSR2" />
-      <arg value="--extensions=php" />
-      <arg value="--ignore=autoload.php" />
       <arg path="${basedir}/src" />
       <arg path="${basedir}/tests" />
     </exec>
@@ -72,11 +70,10 @@
   <target name="phpcs-ci" unless="phpcs.done" description="Find coding standard violations using PHP_CodeSniffer and log result in XML format. Intended for usage within a continuous integration environment.">
     <exec executable="${toolsdir}phpcs" output="/dev/null" taskname="phpcs">
       <arg value="--report=checkstyle" />
-      <arg value="--report-file=${basedir}/build/logs/checkstyle.xml" />
+      <arg value="--report-file=${basedir}/build/reports/phpcs.xml" />
       <arg value="--standard=PSR2" />
-      <arg value="--extensions=php" />
-      <arg value="--ignore=autoload.php" />
       <arg path="${basedir}/src" />
+      <arg path="${basedir}/tests" />
     </exec>
     <property name="phpcs.done" value="true" />
   </target>

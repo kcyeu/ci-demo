@@ -16,7 +16,7 @@ phpcs:
 	@echo "================"
 	@echo "$(PHPCS)"
 	@echo
-	phpcs --standard=PSR2 ./src
+	phpcs --standard=PSR2 ./src ./tests
 	@echo
 
 phpmd:
@@ -45,7 +45,7 @@ phpcs-ci:
 	phpcs --report=checkstyle \
 		--report-file=build/reports/phpcs.xml \
 		--standard=PSR2 \
-		./src
+		./src ./tests
 	@echo
 
 phpmd-ci: 
