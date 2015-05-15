@@ -26,6 +26,8 @@ class Math
      * @param numberic $num2 2nd number
      *
      * @return numberic sum of $num1 and $num2, FALSE for exception
+     * @example add(1, 41)
+     *
      *
      */
     public function add($num1, $num2)
