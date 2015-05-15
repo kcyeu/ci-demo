@@ -10,6 +10,7 @@
  * @author   Kuo-Cheng Yeu <kmd@mikuru.tw>
  * @license  GPL 2.0
  * @link     https://github.com/kcyeu/ci-demo
+ *
  */
 namespace CI_Demo;
 
@@ -26,8 +27,6 @@ class Math
      * @param numberic $num2 2nd number
      *
      * @return numberic sum of $num1 and $num2, FALSE for exception
-     * @example add(1, 41)
-     *
      *
      */
     public function add($num1, $num2)
