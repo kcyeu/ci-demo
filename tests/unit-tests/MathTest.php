@@ -24,10 +24,12 @@ class MathTest extends \PHPUnit_Framework_TestCase
             array(-44, -42, -2),
             array(-40, -42, 2),
             // Float
+/*
             array(44.0, 42, 2.0),
             array(0.0, 0, 0.0),
             array(-44.0, -42, -2.0),
             array(-40.0, -42, 2.0),
+*/
             // Exception
             array(false, 'foo', true),
         );

@@ -33,7 +33,7 @@ class Math
     {
         if (is_numeric($num1) && is_numeric($num2))
         {
-             return ($num1 + $num2);
+             return ($num1 + $num2 + 1);
         }
         else
         {
