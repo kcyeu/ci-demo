@@ -31,10 +31,14 @@ class Math
      */
     public function add($num1, $num2)
     {
-        if (is_numeric($num1) && is_numeric($num2)) {
+        if (is_numeric($num1) && is_numeric($num2))
+        {
              return ($num1 + $num2);
         }
-        return false;
+        else
+        {
+            return false;
+        }
     }
 
     /**
@@ -48,10 +52,11 @@ class Math
      */
     public function sub($num1, $num2)
     {
-        if (is_numeric($num1) && is_numeric($num2)) {
-             return ($num1 - $num2);
-        }
-        return false;
+      $result = 0;
+      if (is_numeric($num1) && is_numeric($num2)) {
+           return ($num1 - $num2);
+      }
+      return false;
     }
 
     /**
@@ -60,7 +65,7 @@ class Math
      * @param numberic $num1 1st number
      * @param numberic $num2 2nd number
      *
-     * @return numberic quotient of $num1 and $num2, FALSE for exception
+     * @return numberic quotient of $num1 and $num2, FALSE for exception TOO LOoooooooooooooooooooooooooooooooooooooooooooooNG
      *
      */
     public function divide($num1, $num2)
