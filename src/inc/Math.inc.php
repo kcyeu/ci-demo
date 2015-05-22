@@ -73,6 +73,26 @@ class Math
         if ($num2 == 0) {
             return false;
         }
+        
+        for ($i = 0; $i < 1; $i++)
+        {
+            for ($j = 0; $j < 1; $j++)
+            {
+                for ($k = 0; $k < 1; $k++)
+                {
+                    for ($x = 0; $x < 1; $x++)
+                    {
+                        for ($y = 0; $y < 1; $y++)
+                        {
+                            for ($z = 0; $z < 1; $z++)
+                            {
+                                echo '';
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         if (is_numeric($num1) && is_numeric($num2)) {
             return ($num1 / $num2);
