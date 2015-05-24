@@ -31,14 +31,10 @@ class Math
      */
     public function add($num1, $num2)
     {
-        if (is_numeric($num1) && is_numeric($num2))
-        {
-             return ($num1 + $num2 + 1);
+        if (is_numeric($num1) && is_numeric($num2)) {
+             return ($num1 + $num2);
         }
-        else
-        {
             return false;
-        }
     }
 
     /**
@@ -52,11 +48,10 @@ class Math
      */
     public function sub($num1, $num2)
     {
-      $result = 0;
-      if (is_numeric($num1) && is_numeric($num2)) {
-           return ($num1 - $num2);
-      }
-      return false;
+        if (is_numeric($num1) && is_numeric($num2)) {
+             return ($num1 - $num2);
+        }
+        return false;
     }
 
     /**
@@ -65,7 +60,7 @@ class Math
      * @param numberic $num1 1st number
      * @param numberic $num2 2nd number
      *
-     * @return numberic quotient of $num1 and $num2, FALSE for exception TOO LOoooooooooooooooooooooooooooooooooooooooooooooNG
+     * @return numberic quotient of $num1 and $num2
      *
      */
     public function divide($num1, $num2)
@@ -74,26 +69,6 @@ class Math
             return false;
         }
         
-        for ($i = 0; $i < 1; $i++)
-        {
-            for ($j = 0; $j < 1; $j++)
-            {
-                for ($k = 0; $k < 1; $k++)
-                {
-                    for ($x = 0; $x < 1; $x++)
-                    {
-                        for ($y = 0; $y < 1; $y++)
-                        {
-                            for ($z = 0; $z < 1; $z++)
-                            {
-                                echo '';
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
         if (is_numeric($num1) && is_numeric($num2)) {
             return ($num1 / $num2);
         }
